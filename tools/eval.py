@@ -59,7 +59,7 @@ def main():
     eval_class = build_metric(config['Metric'])
 
     # start eval
-    metirc = program.eval(model, valid_dataloader, post_process_class,
+    metric = program.eval(model, valid_dataloader, post_process_class,
                           eval_class, use_srn)
     try:
         eval_result_file = config['Eval']['save_result_dir']
@@ -71,7 +71,7 @@ def main():
     except Exception as e:
         pass
     logger.info('metric eval ***************')
-    for k, v in metirc.items():
+    for k, v in metric.items():
         logger.info('{}:{}'.format(k, v))
 
 
