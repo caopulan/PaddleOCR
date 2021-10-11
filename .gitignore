@@ -10,6 +10,7 @@ __pycache__/
 inference/
 inference_results/
 output/
+models/
 
 *.DS_Store
 *.vs
